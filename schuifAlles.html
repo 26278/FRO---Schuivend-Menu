@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Schuivend Menu</title>
+	<meta name="author" content="Jochem de Wit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		#toggleMenu:checked ~ main{
+			margin-left: 10em;
+		}
+		#toggleLabel::before{
+			content: "\2630";
+			cursor: pointer;
+
+		}
+		#toggleMenu:checked ~ main #toggleLabel::before{
+			content:"\2715";
+		}
+
+		nav{
+			position: fixed;
+		}
+
+		main{
+			position: absolute;
+			margin:left: 0;
+			transition: margin-left .6s cubic-bezier(.17,.67,.83,1.36);
+		}
+
+	</style>
+</head>
+
+<body>
+	<input type="checkbox" id="toggleMenu">
+	<nav>
+		<h4>Menu</h4>
+		<ul>
+			<li>
+				<a href="schuifInhoud.html" >Inhoud schuift</a>
+			</li>
+			<li>
+				<a href="schuifMenu.html">Menu schuift</a>
+			</li>
+			<li>
+				<a href="schuifAlles.html" class="actief">Alles schuift</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<label for="toggleMenu" id="toggleLabel"></label>
+		<h1>Lieveheers&shy;beestje</h1>
+		<div id="validatie">
+		    <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+		        <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+		    <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+		        <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+		    </a>
+		</div>
+	</main>
+
+</body>
+</html>
